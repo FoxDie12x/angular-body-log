@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container-fluid ml-0 mr-2 pr-0 pl-0 d-flex flex-column h-100" style="border: 2px solid darkgreen">
+
+  <div class="row mb-4 pb-0 d-flex flex-fill mr-0">
+    <!-- Simple Left Nav Bar--> <!-- VISIBILE ON SMALL SCREENS ONLY -->
+    <div class="col-lg-2 ml-2 responsive" style="background-color: #F7F9FA; max-width: 200px; border: 1px solid red">
+      <ul class="nav flex-column mt-4">
+        <li class="nav-item">
+          <h6><a class="nav-link">Documenten</a></h6>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <!-- MAIN CONTENT -->
+    <div class="col-sm-12 col-md-12 col-lg mt-4" style="height: 100%; border: 1px solid black;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+  <!-- BOTTOM BAR -->
+  <div class="row justify-content-between" style="position: fixed; bottom: 0; width: 100%;  background-color: white;">
+    <div class="col-lg-2 ml-2 responsive text-center" style="background-color: #F7F9FA; max-height: 100%; max-width: 200px;">
+      <!--
+      <button mat-button [matMenuTriggerFor]="accountChooser" style="width: 100%;">best</button>
+      <mat-menu #accountChooser="matMenu">
+          <button mat-menu-item>Get Consently Business</button>
+          <button mat-menu-item>test</button>
+      </mat-menu>
+      -->
+    </div>
+
+
+    <div class="col-sm-12 col-lg text-right">
+      <div class="row justify-content-end">
+        <div class="text-center" style="line-height: 2.5em; min-width: 200px; display: flex;">
+          <!-- TODO: still needs to be developed
+          <button mat-icon-button [matMenuTriggerFor]="menu2" style="flex: 1">
+              <mat-icon>more_horiz</mat-icon>
+          </button>
+          <mat-menu #menu2="matMenu">
+              <button mat-menu-item>
+                  <h6>Account</h6>
+              </button>
+              <button mat-menu-item>
+                  <h6>Log uit</h6>
+              </button>
+          </mat-menu>
+          -->
+
+          <a routerLink="/terms-and-conditions" target="_blank" style="text-decoration: none; flex: 1; margin-left: 1.3rem;" data-toggle="tooltip" data-placement="top" title="Terms and privacy">Privacy</a>
+
+          <!-- TODO: this isn't working on small devices -> you can not drag the window, needs to be fixed first!
+            <button style="margin-left: 1rem;"
+                    mat-icon-button
+                    feedback
+                    (send)="onSend($event)"
+                    matTooltip="Verstuur feedback"
+                    matTooltipPosition="above">
+                <mat-icon>feedback</mat-icon>
+            </button>
+          -->
+
+          <a routerLink="/help" target="_blank" style="text-decoration: none; flex: 1; margin-left: 1.3rem;">
+            <!--            <mat-icon style="margin-left: 1rem; cursor: pointer; flex: 1; position: relative; top: 5px; font-size: 1.75em;" matTooltip="Help" matTooltipPosition="above">help_outline</mat-icon>-->
+            <i class="far fa-question-circle"></i>
+          </a>
+
+          <a style="text-decoration: none; flex: 1; margin-left: 1.3rem; margin-right: 1.5rem;" href="mailto: support@formbler.com?subject=Feedback" target="_blank">Email</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
