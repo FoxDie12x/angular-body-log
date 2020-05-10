@@ -1,1 +1,17 @@
-<p>register works!</p>
+<div class="container border h-100 px-0" style="min-height: 500px;">
+  <div class="row w-100 m-0 mt-5">
+    <div class="col-7 mx-auto text-center">
+      <canvas #myChart id="myChart" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-3">
+      <label for="inputWeight" class="my-0"><small>Enter weight</small></label>
+      <input id="inputWeight" [formControl]="weight" type="number" class="form-control" placeholder="Weight (in kg's)">
+    </div>
+    <div class="col-3 align-self-end pl-0">
+      <button class="btn btn-primary" (click)="addWeight(weight.value)">Add</button>
+    </div>
+  </div>
+</div>

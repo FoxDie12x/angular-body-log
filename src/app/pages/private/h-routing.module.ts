@@ -4,7 +4,7 @@ import {HComponent} from './h.component';
 
 
 const routes: Routes = [
-  {path: '', component: HComponent},
+  {path: 'h', component: HComponent},
 ];
 
 @NgModule({
